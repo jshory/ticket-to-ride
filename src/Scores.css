@@ -15,16 +15,12 @@
 }
 
 .player-column {
-    /* background-image: url(./images/railroad.jpg); */
-    /* background-color: #68979B; */
     background-color: #9dc0c3;
-    /* background-size: cover; */
     flex: 0 0 75%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    /* flex-basis: 100%; */
 }
 
 .left-player, .right-player, .player {
@@ -66,26 +62,20 @@ ul {
 }
 
 li {
-    /* display: list-item; */
     cursor: pointer;
     list-style: none;
     clear: left;
     padding: 5px 10px;
     font-size: 20px;
-    /* margin-left: 22%; */
     margin-bottom: 15px;
     border-radius: 100px;
     box-shadow: none;
     background: white;
     border: 1px solid #14171a;
     padding: 6px 16px;
-    
 }
 
 .add-button, .delete-button {
-    /* border-radius:2em;
-    outline: none;
-    width: 10%; */
     display: inline-block;
     border-radius: 100px;
     border: 1px solid #14171a;

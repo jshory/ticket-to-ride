@@ -47,15 +47,15 @@ class Player extends Component {
         this.setState({
             [name]: value
         });
-        
+
         if (name === "name") {
             this.props.updateName(this.state.playerNum, value);
         }
     }
-    
+
     resetForm(event) {
         event.preventDefault();
-        
+
         this.setState({
             showForm: true,
             name: "",
@@ -79,10 +79,10 @@ class Player extends Component {
         event.preventDefault();
 
         var total = (this.state.oneTrain * 1) + (this.state.twoTrains * 2) + (this.state.threeTrains * 4) + (this.state.fourTrains * 7) + (this.state.fiveTrains * 10) + (this.state.sixTrains * 15);
-        
+
         total += this.state.successfulDestinations;
         total -= this.state.unsuccessfulDestinations;
-        
+
         if (this.state.longestRoute) {
             total += 10;
         }
@@ -105,53 +105,51 @@ class Player extends Component {
 
         return (
             <div className={`player ${this.state.showForm ? "" : "hidden"}`}>
-                {/* <div className={'player-form' + this.props.numPlayers}> */}
-                    <h2 className="center-label">{name}</h2>
-                    
-                    <form onSubmit={this.calculateScore} onReset={this.resetForm}>
-                        <label className="center-label">Name:
+                <h2 className="center-label">{name}</h2>
+
+                <form onSubmit={this.calculateScore} onReset={this.resetForm}>
+                    <label className="center-label">Name:
                             <br />
-                            <input className="wide-input" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-                        </label>
-                        <br />
+                        <input className="wide-input" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+                    </label>
+                    <br />
 
-                        <label className="center-label">Claimed Routes:
+                    <label className="center-label">Claimed Routes:
                         <br />
-                            <label className="inline-label">1 Car</label><input type="text" className="inline-input" name="oneTrain" value={this.state.oneTrain} onChange={this.handleChange} /><br />
-                            <label className="inline-label">2 Cars</label><input type="text" className="inline-input" name="twoTrains" value={this.state.twoTrains} onChange={this.handleChange} /><br />
-                            <label className="inline-label">3 Cars</label><input type="text" className="inline-input" name="threeTrains" value={this.state.threeTrains} onChange={this.handleChange} /><br />
-                            <label className="inline-label">4 Cars</label><input type="text" className="inline-input" name="fourTrains" value={this.state.fourTrains} onChange={this.handleChange} /><br />
-                            <label className="inline-label">5 Cars</label><input type="text" className="inline-input" name="fiveTrains" value={this.state.fiveTrains} onChange={this.handleChange} /><br />
-                            <label className="inline-label">6 Cars</label><input type="text" className="inline-input" name="sixTrains" value={this.state.sixTrains} onChange={this.handleChange} /><br />
-                        </label>
-                        <br />
+                        <label className="inline-label">1 Car</label><input type="text" className="inline-input" name="oneTrain" value={this.state.oneTrain} onChange={this.handleChange} /><br />
+                        <label className="inline-label">2 Cars</label><input type="text" className="inline-input" name="twoTrains" value={this.state.twoTrains} onChange={this.handleChange} /><br />
+                        <label className="inline-label">3 Cars</label><input type="text" className="inline-input" name="threeTrains" value={this.state.threeTrains} onChange={this.handleChange} /><br />
+                        <label className="inline-label">4 Cars</label><input type="text" className="inline-input" name="fourTrains" value={this.state.fourTrains} onChange={this.handleChange} /><br />
+                        <label className="inline-label">5 Cars</label><input type="text" className="inline-input" name="fiveTrains" value={this.state.fiveTrains} onChange={this.handleChange} /><br />
+                        <label className="inline-label">6 Cars</label><input type="text" className="inline-input" name="sixTrains" value={this.state.sixTrains} onChange={this.handleChange} /><br />
+                    </label>
+                    <br />
 
-                        <label className="center-label">Successful Destinations Total:
+                    <label className="center-label">Successful Destinations Total:
                         <br />
-                            <input className="wide-input" type="text" name="successfulDestinations" value={this.state.successfulDestinations} onChange={this.handleChange} /><br />
-                        </label>
-                        <br />
+                        <input className="wide-input" type="text" name="successfulDestinations" value={this.state.successfulDestinations} onChange={this.handleChange} /><br />
+                    </label>
+                    <br />
 
-                        <label className="center-label">Unsuccessful Destinations Total:
+                    <label className="center-label">Unsuccessful Destinations Total:
                         <br />
-                            <input className="wide-input" type="text" name="unsuccessfulDestinations" value={this.state.unsuccessfulDestinations} onChange={this.handleChange} /><br />
-                        </label>
+                        <input className="wide-input" type="text" name="unsuccessfulDestinations" value={this.state.unsuccessfulDestinations} onChange={this.handleChange} /><br />
+                    </label>
 
-                        <div className="center-label">
+                    <div className="center-label">
                         <label className="check-label">Longest Route?
                             <input type="checkbox" className="check-input" name="longestRoute" value={this.state.longestRoute} onChange={this.handleChange} /><br />
                         </label>
-                        </div>
-                        
-                        {this.state.showScore && 
-                            <h2 className="center-label">{name}'s Score: {this.state.score}</h2>
-                        }
+                    </div>
 
-                        <button className="submit-button" type="submit">Score</button>
-                        <button className="reset-button" type="reset">Reset</button>
+                    {this.state.showScore &&
+                        <h2 className="center-label">{name}'s Score: {this.state.score}</h2>
+                    }
 
-                    </form>
-                {/* </div> */}
+                    <button className="submit-button" type="submit">Score</button>
+                    <button className="reset-button" type="reset">Reset</button>
+
+                </form>
             </div>
         )
     }

@@ -18,10 +18,6 @@ class Scores extends Component {
 
         this.state = {
             numPlayers: 2,
-            // players: {
-            //     names: playerNames,
-            //     scores: playerScores
-            // },
             names: playerNames,
             scores: playerScores,
             activePlayer: 0
@@ -33,55 +29,7 @@ class Scores extends Component {
         this.updateName = this.updateName.bind(this);
         this.updateScore = this.updateScore.bind(this);
     }
-    /*
-        componentDidUpdate(prevProps) {
-            if (this.props.numPlayers > prevProps.numPlayers) {
-                // var addNames = [...this.state.players.names];
-                // var addScores = [...this.state.players.scores];
-                var addNames = [...this.state.names];
-                var addScores = [...this.state.scores];
-    
-                for (var i = prevProps.numPlayers + 1; i <= this.props.numPlayers; i++) {
-                    var newName = "Player " + i;
-                    addNames.push(newName);
-    
-                    var newScore = 0;
-                    addScores.push(newScore);
-                }
-    
-                this.setState({
-                    // players: {
-                    //     names: addNames,
-                    //     scores: addScores
-                    // }
-                    names: addNames,
-                    scores: addScores
-                })
-            } else if (this.props.numPlayers < prevProps.numPlayers) {
-                var playersToDrop = prevProps.numPlayers - this.props.numPlayers;
-                // var removeNames = [...this.state.players.names];
-                // var removeScores = [...this.state.players.scores];
-                var removeNames = [...this.state.names];
-                var removeScores = [...this.state.scores];
-    
-                while (playersToDrop !== 0) {
-                    removeNames.pop();
-                    removeScores.pop();
-                    playersToDrop--;
-                }
-    
-                this.setState({
-                    // players: {
-                    //     names: removeNames,
-                    //     scores: removeScores
-                    // },
-                    names: removeNames,
-                    scores: removeScores,
-                    activePlayer: 0
-                })
-            }
-        }
-    */
+
     addPlayer() {
         if (this.state.numPlayers < 5) {
             var addNames = [...this.state.names];
@@ -102,7 +50,6 @@ class Scores extends Component {
     }
 
     deletePlayer() {
-        // console.log(e.target.id);
         if (this.state.numPlayers > 2) {
             var removeNames = [...this.state.names];
             var removeScores = [...this.state.scores];
@@ -136,9 +83,7 @@ class Scores extends Component {
             updatedNames[playerNum] = thisName;
 
             this.setState({
-                // players: {
                 names: updatedNames
-                // }
             })
         } else {
             updatedNames[playerNum] = "Player " + (playerNum + 1);
@@ -149,16 +94,13 @@ class Scores extends Component {
     }
 
     updateScore = (playerNum, s) => {
-        // let updatedScores = [...this.state.players.scores];
         let updatedScores = [...this.state.scores];
         let thisScore = { ...updatedScores[playerNum] };
         thisScore = s;
         updatedScores[playerNum] = thisScore;
 
         this.setState({
-            // players: {
             scores: updatedScores
-            // }
         })
     }
 
@@ -166,9 +108,7 @@ class Scores extends Component {
         var playerData = [];
 
         for (var i = 0; i < this.state.numPlayers; i++) {
-            // playerData.push(<li key={i} id={i} className={this.state.activePlayer === i ? 'active-player' : ''} onClick={this.updateActivePlayer}>{this.state.players.names[i]}'s Score: </li>);
             playerData.push(<li key={i} id={i} className={this.state.activePlayer === i ? 'active-player' : ''} onClick={this.updateActivePlayer}>{this.state.names[i]}'s Score: {this.state.scores[i]}</li>
-                /* <button id={i} className="delete-button" onClick={this.deletePlayer}>-</button>} */
             );
         }
 
@@ -192,16 +132,12 @@ class Scores extends Component {
                 <div className="column player-column">
                     <div className="left-player">
                         {this.state.activePlayer > 0 && <p id={this.state.activePlayer - 1} onClick={this.updateActivePlayer}> &lt; <br /> {this.state.names[this.state.activePlayer - 1]} </p>}
-                        {/* <p> Player {this.state.activePlayer} </p> */}
                     </div>
                     {players}
                     <div className="right-player" >
                         {this.state.activePlayer < 4 && this.state.numPlayers > (this.state.activePlayer + 1) && <p id={this.state.activePlayer + 1} onClick={this.updateActivePlayer}> &gt; <br /> {this.state.names[this.state.activePlayer + 1]} </p>}
-                        {/* <p>  </p> */}
                     </div>
-                    {/* <Player numPlayers={this.props.numPlayers} updateName={this.updateName} updateScore={this.updateScore} /> */}
                 </div>
-
             </div>
         )
     }
