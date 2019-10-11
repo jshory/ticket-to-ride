@@ -1,0 +1,118 @@
+.scores {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #FFD2AA;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    align-items: center;
+}
+
+.player-column {
+    /* background-image: url(./images/railroad.jpg); */
+    /* background-color: #68979B; */
+    background-color: #9dc0c3;
+    /* background-size: cover; */
+    flex: 0 0 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* flex-basis: 100%; */
+}
+
+.left-player, .right-player, .player {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.left-player, .right-player {
+    text-align: center;
+    font-size: 26px;
+    align-items: center;
+    justify-content: center;
+}
+
+.active-player {
+    background-color: lightgreen;
+}
+
+p {
+    outline: none;
+    cursor: pointer;
+    border: 1px solid black;
+    background: white;
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    /* display: list-item; */
+    cursor: pointer;
+    list-style: none;
+    clear: left;
+    padding: 5px 10px;
+    font-size: 20px;
+    /* margin-left: 22%; */
+    margin-bottom: 15px;
+    border-radius: 100px;
+    box-shadow: none;
+    background: white;
+    border: 1px solid #14171a;
+    padding: 6px 16px;
+    
+}
+
+.add-button, .delete-button {
+    /* border-radius:2em;
+    outline: none;
+    width: 10%; */
+    display: inline-block;
+    border-radius: 100px;
+    border: 1px solid #14171a;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-right: 3px;
+    margin-left: 3px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.add-button:hover {
+    background-color: lightgreen;
+}
+
+.delete-button:hover {
+    background-color: #ff2121;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}

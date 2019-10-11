@@ -1,0 +1,133 @@
+
+/* .player-form2 { */
+    /* float: left; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* width: 100%; */
+    /* margin-left: 20%; */
+    /* display: inline-block; */
+/* } */
+
+/* .player-form3 { */
+    /* float: left; */
+    /* justify-content: center; */
+    /* width: 18%; */
+    /* margin-left: 10% */
+    /* display: inline-block; */
+/* } */
+
+/* .player-form4 { */
+    /* float: left; */
+    /* justify-content: center; */
+    /* width: 16%; */
+    /* margin-left: 7% */
+    /* display: inline-block; */
+/* } */
+
+/* .player-form5 { */
+    /* float: left; */
+    /* justify-content: center; */
+    /* width: 14%; */
+    /* margin-left: 5% */
+    /* display: inline-block; */
+/* } */
+
+.hidden {
+    display: none;
+}
+
+.center-label {
+    display: block;
+    text-align: center;
+}
+
+label {
+    /* font-weight: bold; */
+    font-size: 18px;
+}
+
+input {
+    outline: none;
+    /* width: 100%; */
+    padding-top: 5px;
+    /* height: 30px; */
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 5px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+}
+
+.wide-input {
+    width: 100%;
+}
+
+.inline-label {
+    width: 30%;
+    /* padding-right: 20px; */
+    display: inline-block;
+    text-align: left;
+}
+
+.inline-input {
+    width: 60%;
+    display: inline-block;
+}
+
+.check-label {
+    margin-top: 10px;
+    margin-left: 20px;
+    /* width: 60%; */
+    display: inline-block;
+}
+
+.check-input {
+    margin-left: 15px;
+    /* width: 10%; */
+    /* margin-left: 15px; */
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    /* outline: 1px solid black; */
+}
+
+.submit-button, .reset-button {
+    
+    background: white;
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    
+    height: 35px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid;
+    
+    display: inline-block;
+    width: 45%;
+    
+    text-align: center;
+    white-space: nowrap;
+}
+
+.submit-button {
+    margin-right: 5%;
+}
+
+.reset-button {
+    margin-left: 5%;
+}
+
+.submit-button:hover {
+    background-color: lightgreen;
+}
+
+.reset-button:hover {
+    background-color: #ff2121;
+}

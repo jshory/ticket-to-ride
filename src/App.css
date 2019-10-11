@@ -1,22 +1,58 @@
 .App {
-  text-align: center;
+    font-family: 'Questrial', sans-serif;
+    background-image: url(./images/railroad.jpg);
+    /* background-color: #68979B; */
+    background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    /* display: inline-block; */
+    /* margin-left: 25%; */
+    text-align: center;
+    /* color: #566363; */
+    border: 1px solid black;
+    height: 150px;
+    /* width: 50%; */
+    /* background-color: #bbc0bb; */
+    /* background-color: #D49C6A; */
 }
 
-.App-link {
-  color: #09d3ac;
+.title {
+    padding-top: 10px;
+    /* vertical-align: center; */
+    color: black;
+    border: 2px solid black;
+    /* background-color: #FFD2AA; */
+    background-image: url(./images/title.jpg);
+    background-size: cover;
+    width: 25%;
+    margin: auto;
+    margin-top: 59px;
+    height: 40px;
 }
+
+.number-button {
+    display: inline-block;
+    margin-right: 25px;
+    width: 100px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+
+.active {
+    background-color: lightgreen;
+}
+
+/* .player {
+    display: inline-block;
+    margin-right: 50px;
+} */
+
